@@ -1,0 +1,163 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* Definindo a fonte clássica para todo o site */
+body {
+    /* Comic Sans MS é a fonte Y2K definitiva! */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Bradley Hand', cursive, sans-serif;
+    background-color: #FFC0CB; /* Um fundo rosa bebê */
+    color: #333;
+    margin: 0;
+    padding: 20px; /* Espaçamento para telas grandes */
+}
+
+/* O container principal que segura o conteúdo */
+.container {
+    max-width: 700px;
+    margin: 20px auto; /* Centraliza na página */
+    background-color: #FFFFFF; /* Fundo branco para o conteúdo */
+    
+    /* A borda pontilhada rosa choque é o puro suco dos anos 2000! */
+    border: 5px dotted #FF1493; /* Rosa Choque (DeepPink) */
+    
+    border-radius: 15px; /* Cantos arredondados */
+    padding: 20px;
+    
+    /* Uma sombra para dar o efeito "flutuante" */
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo do cabeçalho (Título) */
+header {
+    font-size: 9.5px;
+    text-align: center;
+    border-bottom: 2px dashed #FF69B4; /* Divisor rosa (HotPink) */
+    padding-bottom: 15px;
+}
+
+header h1 {
+    color: #FF1493; /* Rosa Choque */
+    font-size: 2.5em; /* Tamanho grande */
+    
+    /* Efeito de "glow" (brilho) no texto, muito usado na época */
+    text-shadow: 2px 2px 5px #FFB6C1; /* Rosa Claro (LightPink) */
+    
+    /* Evita que o texto quebre de forma estranha */
+    word-wrap: break-word; 
+}
+
+header h2 {
+    color: #DA70D6; /* Roxo (Orchid) */
+    font-size: 7px;
+}
+
+/* Estilizando os títulos das seções */
+h3 {
+    color: #FF1493;
+    font-size: 1.5em;
+    border-bottom: 1px solid #FFC0CB;
+    padding-bottom: 5px;
+}
+
+/* Estilizando as seções */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #FFF0F5; /* Lavanda (LavenderBlush) */
+    border-radius: 8px;
+}
+
+/* Estilizando o formulário */
+.form-grupo {
+    margin-bottom: 15px;
+}
+
+.form-grupo label {
+    display: block; /* Faz o texto ficar acima do campo */
+    font-weight: bold;
+    color: #DA70D6;
+    margin-bottom: 5px;
+}
+
+/* Campos de texto e seleção */
+input[type="text"],
+input[type="email"],
+select {
+    width: 90%; /* Mudança: de 95% para 100% */
+    padding: 10px;
+    border: 2px solid #FFB6C1; /* Borda rosa claro */
+    border-radius: 5px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Manter a fonte! */
+    font-size: 1em;
+}
+
+/* O botão de enviar! */
+button {
+    background-color: #FF69B4; /* Rosa (HotPink) */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px outset #FF1493; /* Efeito de botão "3D" antigo */
+    border-radius: 10px;
+    cursor: pointer; /* Muda o mouse para uma "mãozinha" */
+    width: 100%; /* O botão agora ocupa 100% da largura */
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+    background-color: #FF1493; /* Escurece o botão */
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #DA70D6;
+}
+
+
+/* -----------------------------------------------------
+   PASSO 2: A MÁGICA DA RESPONSIVIDADE (MEDIA QUERY)
+   -----------------------------------------------------
+   Os estilos abaixo só serão aplicados se a tela do
+   dispositivo for IGUAL ou MENOR que 700px.
+*/
+
+@media (max-width: 700px) {
+
+    /* Diminui o espaçamento geral do site */
+    body {
+        padding: 10px;
+    }
+
+    /* O container principal agora ocupa 100% da tela */
+    .container {
+        margin: 5px 0; /* Menos margem em cima/baixo */
+        padding: 15px; /* Menos espaçamento interno */
+        
+        /* Remove a borda e a sombra no celular para 
+           dar mais espaço ao conteúdo */
+        border: none;
+        box-shadow: none;
+    }
+
+    /* Diminui o tamanho do título principal */
+    header h1 {
+        font-size: 2em; 
+    }
+
+    /* Diminui o subtítulo */
+    header h2 {
+        font-size: 1.1em;
+    }
+
+    /* O botão de enviar não precisa de 100% no mobile,
+       "auto" já o ajusta ao texto */
+    button {
+        width: auto;
+    }
+}
